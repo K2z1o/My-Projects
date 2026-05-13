@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_editprofil"
+    android:background="#1B3C53">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1B3C53"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.16"
+        app:layout_constraintWidth_percent="1">
+
+        <ImageButton
+            android:id="@+id/returnButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/roundcorner"
+            android:src="@drawable/arrowback"
+            android:contentDescription="stringback"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edycja"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/alfa_font"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.80"
+        app:layout_constraintWidth_percent="0.96"/>
+
+    <EditText
+        android:id="@+id/imieEdit"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Imię:"
+        android:fontFamily="@font/alfa_font"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <EditText
+        android:id="@+id/nazwiskoEdit"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Nazwisko:"
+        android:fontFamily="@font/alfa_font"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/imieEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <EditText
+        android:id="@+id/telefonEdit"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Nr telefonu:"
+        android:inputType="phone"
+        android:maxLength="9"
+        android:fontFamily="@font/alfa_font"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/nazwiskoEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <EditText
+        android:id="@+id/emailEdit"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Email:"
+        android:fontFamily="@font/alfa_font"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/telefonEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerWoj"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/emailEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerPowiat"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/spinnerWoj"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerGmina"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/spinnerPowiat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerMiejscowosc"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/spinnerGmina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/zapiszButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Zapisz"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="20sp"
+        app:cornerRadius="12dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FFFFFF"
+        android:backgroundTint="#1B3C53"
+        app:layout_constraintTop_toBottomOf="@id/spinnerMiejscowosc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

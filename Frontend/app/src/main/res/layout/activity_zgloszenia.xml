@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_zgloszenia"
+    android:background="#1B3C53">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.16"
+        app:layout_constraintWidth_percent="1">
+
+        <ImageButton
+            android:id="@+id/returnButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/roundcorner"
+            android:src="@drawable/arrowback"
+            android:contentDescription="stringback"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dodaj Zgłoszenie"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/alfa_font"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.80"
+        app:layout_constraintWidth_percent="0.96"/>
+
+    <EditText
+        android:id="@+id/tytulText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Tytuł zgłoszenia:"
+        android:visibility="gone"
+        android:textColorHint="#BBBBBB"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/alfa_font"
+        app:layout_constraintTop_toBottomOf="@id/kategoriaRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/kategoriaTextView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="Wybierz kategorię:"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/alfa_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        android:layout_marginTop="30dp"/>
+
+    <RadioGroup
+        android:id="@+id/kategoriaRadioGroup"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kategoriaTextView">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Zwierze"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#FFFFFF"
+            android:fontFamily="@font/alfa_font"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Inne"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/alfa_font"/>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rozmiarRadioGroup"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/kategoriaRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Mały"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/alfa_font"/>
+
+        <RadioButton
+            android:id="@+id/radioMedium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Średni"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/alfa_font"/>
+
+        <RadioButton
+            android:id="@+id/radioLarge"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Duży"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/alfa_font"/>
+
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/optionsBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="rozmiarRadioGroup,kategoriaRadioGroup, tytulText"
+        app:barrierAllowsGoneWidgets="false"/>
+    
+    <EditText
+        android:id="@+id/opisText"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:hint="Krótki opis:"
+        android:textColorHint="#BBBBBB"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/alfa_font"
+        app:layout_constraintTop_toBottomOf="@id/optionsBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/zdjecieButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#1B3C53"
+        android:text="Dodaj zdjęcie"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="12sp"
+        app:cornerRadius="12dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FFFFFF"
+        android:layout_marginStart="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/opisText"/>
+
+    <ImageView
+        android:id="@+id/zdjecieImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundcorner"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/zdjecieButton"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/wyczyscButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#1B3C53"
+        android:text="Wyczyść"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="20sp"
+        app:cornerRadius="12dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/zdjecieImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/dalejButton"
+        android:layout_margin="16dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <Button
+        android:id="@+id/dalejButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#1B3C53"
+        android:text="Dalej"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="20sp"
+        app:cornerRadius="12dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/zdjecieImageView"
+        app:layout_constraintStart_toEndOf="@id/wyczyscButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintWidth_percent="0.4"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

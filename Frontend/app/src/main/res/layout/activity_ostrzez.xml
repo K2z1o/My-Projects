@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_zgloszenia"
+    android:background="#1B3C53">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1B3C53"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.16"
+        app:layout_constraintWidth_percent="1">
+
+        <ImageButton
+            android:id="@+id/returnButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/roundcorner"
+            android:src="@drawable/arrowback"
+            android:contentDescription="stringback"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dodaj Ostrzeżenie"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/alfa_font"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.80"
+        app:layout_constraintWidth_percent="0.96"/>
+
+    <EditText
+        android:id="@+id/tytulText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Tytuł ostrzezenia:"
+        android:textColorHint="#BBBBBB"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/alfa_font"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="Grupa odbiorców:"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/alfa_font"
+        app:layout_constraintTop_toBottomOf="@id/tytulText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"/>
+
+
+    <Spinner
+        android:id="@+id/spinnerWoj"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="22dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerPowiat"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/spinnerWoj"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="22dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerGmina"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/spinnerPowiat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="22dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerMiejscowosc"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/spinnerGmina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="22dp"/>
+
+            <EditText
+                android:id="@+id/czasText"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:hint="Czas ostrzeżenia:"
+                android:textColorHint="#BBBBBB"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/alfa_font"
+                app:layout_constraintTop_toBottomOf="@id/spinnerMiejscowosc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="16dp"/>
+
+            <EditText
+                android:id="@+id/opisText"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:hint="Opis:"
+                android:textColorHint="#BBBBBB"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/alfa_font"
+                app:layout_constraintTop_toBottomOf="@id/czasText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="16dp"/>
+
+    <Button
+        android:id="@+id/wyczyscButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#1B3C53"
+        android:text="Wyczyść"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="20sp"
+        app:cornerRadius="12dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/opisText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/dalejButton"
+        android:layout_margin="16dp"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <Button
+        android:id="@+id/dalejButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#1B3C53"
+        android:text="Dalej"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="20sp"
+        app:cornerRadius="12dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/opisText"
+        app:layout_constraintStart_toEndOf="@id/wyczyscButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:layout_constraintWidth_percent="0.4"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

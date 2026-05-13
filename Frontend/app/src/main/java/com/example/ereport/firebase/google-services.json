@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "721249699443",
+    "project_id": "ereport-d5474",
+    "storage_bucket": "ereport-d5474.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721249699443:android:338e934a28998ca8240c06",
+        "android_client_info": {
+          "package_name": "com.company.ereport"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbPO_X6yWj2kqFA6d40CuGvTvEBLBTch8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

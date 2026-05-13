@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_register"
+    android:background="#1B3C53">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.16"
+        app:layout_constraintWidth_percent="1">
+
+        <ImageButton
+            android:id="@+id/returnButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/roundcorner"
+            android:src="@drawable/arrowback"
+            android:contentDescription="stringback"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rejestracja"
+            android:textAlignment="center"
+            android:textSize="32sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/alfa_font"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.80"
+        app:layout_constraintWidth_percent="0.96"/>
+
+    <CheckBox
+        android:id="@+id/kontoCheckBox"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:text="Konto służbowe?"
+        android:fontFamily="@font/alfa_font"
+        android:textColor="#FFFFFF"
+        android:buttonTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <EditText
+        android:id="@+id/imieText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Imię:"
+        android:fontFamily="@font/alfa_font"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/kontoCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nazwiskoText"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <EditText
+        android:id="@+id/nazwiskoText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Nazwisko:"
+        android:fontFamily="@font/alfa_font"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/kontoCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imieText"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Email:"
+        android:fontFamily="@font/alfa_font"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imieText"
+        app:layout_constraintWidth_percent="0.86"/>
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Hasło:"
+        android:fontFamily="@font/alfa_font"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@id/telefonText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailText"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <EditText
+        android:id="@+id/telefonText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Nr telefonu:"
+        android:fontFamily="@font/alfa_font"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailText"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <TextView
+        android:id="@+id/wojewodztwoTextView"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:gravity="center_vertical"
+        android:text="Województwo:"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/telefonText"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/powiatTextView"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:gravity="center_vertical"
+        android:text="Powiat:"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wojewodztwoTextView"/>
+
+    <TextView
+        android:id="@+id/gminaTextView"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:gravity="center_vertical"
+        android:text="Gmina:"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/powiatTextView"/>
+
+    <TextView
+        android:id="@+id/miejscowoscTextView"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:gravity="center_vertical"
+        android:text="Miejscowość:"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gminaTextView"/>
+
+    <Spinner
+        android:id="@+id/wojewodztwo"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFFFFF"
+        android:entries="@array/wojewodztwa_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wojewodztwoTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"/>
+
+    <Spinner
+        android:id="@+id/spinnerPowiat"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/powiatTextView"
+        app:layout_constraintTop_toBottomOf="@+id/wojewodztwo" />
+
+    <Spinner
+        android:id="@+id/spinnerGmina"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gminaTextView"
+        app:layout_constraintTop_toBottomOf="@id/spinnerPowiat"/>
+
+    <Spinner
+        android:id="@+id/spinnerMiejscowosc"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gminaTextView"
+        app:layout_constraintTop_toBottomOf="@id/spinnerGmina"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/wyczyscButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#1B3C53"
+        android:text="Wyczyść"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="20sp"
+        app:cornerRadius="12dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FFFFFF"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/dalejButton"
+        app:layout_constraintTop_toBottomOf="@id/miejscowoscTextView"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dalejButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#1B3C53"
+        android:text="Dalej"
+        android:fontFamily="@font/alfa_font"
+        android:textSize="20sp"
+        app:cornerRadius="12dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FFFFFF"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wyczyscButton"
+        app:layout_constraintTop_toBottomOf="@id/miejscowoscTextView"
+        app:layout_constraintWidth_percent="0.4"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
