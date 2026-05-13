@@ -1,0 +1,128 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+.gora{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.gora > img{
+    box-sizing: border-box;
+    width: 100%;
+    filter: brightness(80%);
+}
+
+.pasek{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: black;
+    gap: 40px;
+    height: 80px;
+    margin: 0;
+    box-shadow: 0 -20px 20px 10px;
+}
+
+.pasek > a{
+    text-decoration: none;
+    color: white;
+    padding: 20px 40px 20px 40px;
+    font-family: monospace;
+    font-size: 30px;
+    transition: all 0.1s ease;
+}
+
+.pasek > a:hover{
+    color: black;
+    background-color: rgb(222, 0, 0);
+    box-shadow: 0 0 10px 4px rgb(222, 0, 0);
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+.linia{
+    position: sticky;
+    top: 80px;
+    z-index: 999;
+    background-color: rgb(222, 0, 0);
+    width: 100%;
+    margin: 0;
+    height: 16px;
+    box-shadow: 0 0 10px 4px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    height: auto;
+    background-color:rgb(240, 240, 240);
+    font-size: 24px;
+    font-family: helvetica;
+    box-sizing: border-box;
+}
+
+.lewy1, .prawy2, .lewy3{
+    margin: 0;
+    display: flex;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(230, 230, 230);
+}
+
+.lewy1 > .tekst, .prawy2 > .tekst, .lewy3 > .tekst{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    font-family: cambria;
+    box-sizing: border-box;
+}
+
+.prawy1, .lewy2, .prawy3{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 10px;
+}
+
+.prawy1 > img, .lewy2 > img, .prawy3 > img{
+    width: 90%;
+    height: auto;
+    box-shadow: 10px 10px 10px;
+    box-sizing: border-box;
+    transition: all 0.1s ease;
+}
+
+.prawy1 > img:hover, .lewy2 > img:hover, .prawy3 > img:hover{
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+.stopka{
+    width: 100%;
+    height: 20px;
+    background-color: rgb(222, 0, 0);
+}
